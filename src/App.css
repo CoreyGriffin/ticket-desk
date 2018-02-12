@@ -1,0 +1,137 @@
+:root {
+  --section-header-txt: #444A56;
+  --header-bar: #EBEEF2;
+  --input-border: #EBECEF;
+  --label-color: #565C69;
+  --input-color: #A0ABC8;
+  --input-placeholder: #DAE0F0;
+}
+
+* {
+  margin: 0;
+}
+*,
+*:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5% !important;
+  font-weight: 400 !important;
+  font-family: 'Open Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.88px;
+}
+
+header {
+  width: 100%;
+  background-color: #F3F6F8;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  padding: 45px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #4778A9;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ticket-input h2, .ticket-queue h2 {
+  color: var(--section-header-txt);
+  font-size: 2.75rem;
+  position: relative;
+  margin: 32px 0;
+  letter-spacing: 1.05px
+}
+
+.ticket-input h2:after, .ticket-queue h2:after {
+  content: "";
+  background-color: var(--header-bar);
+  height: 1px;
+  width: 312px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+
+.ticket-input {
+  flex: 1;
+}
+
+.ticket-queue {
+  flex: 1;
+}
+
+form {
+  /* border: 1px solid red; */
+  max-width: 630px;
+  min-width: 355px;
+  height: auto;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--label-color);
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+
+form input {
+  /* width: 197px; */
+  height: 42px !important;
+  border-radius: 6px;
+  border: 1px solid var(--input-border) !important;
+}
+
+input[type="text"], input[type="date"] {
+  color: var(--input-color) !important;
+  font-size: 1.4rem;
+  letter-spacing: .35px;
+  font-weight: 300;
+}
+
+input[type="date"] {
+  padding-left: 14px;
+  font-weight: 300 !important;
+  font-family: inherit;
+  color: var(--input-placeholder) !important;
+}
+
+input::placeholder, option, textarea::placeholder, input[type="date"]::placeholder {
+  color: var(--input-placeholder) !important;
+  font-weight: 300;
+}
+
+select {
+  width: 170px;
+}
+
+textarea {
+  height: 192px;
+}
+
+button {
+  background-color: #6ACAC5;
+  color: #ffffff;
+  border: 1px solid #F0F0F0;
+  float: right;
+}
